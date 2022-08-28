@@ -13,5 +13,5 @@ function peco_select_recent_directory
   if test $line
     cd $line
     commandline -f repaint
-  fi
+  end
 end
