@@ -8,7 +8,7 @@ function peco_select_recent_directory
   # ^ is string head
   # [0-9]\+ is multiple digits
   # \s\+ is multiple spaces
-  cdr -l | sed 's/^[0-9]\+\s\+//' | peco --prompt="cdr >" $peco_flags | read line
+  z -l | sed 's/^[0-9]\+\s\+//' | peco --prompt="cdr >" $peco_flags | read line
 
   if test $line
     cd $line
