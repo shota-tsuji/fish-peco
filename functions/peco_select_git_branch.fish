@@ -1,5 +1,5 @@
 function peco-git-checkout
-   git branch -a | peco | tr -d ' ' | read branch
+   git branch -a | grep -v 'HEAD' | tr -d ' *' | peco | read branch
    echo $branch
    if [ $branch ]
        if contains $branch "remotes/"
